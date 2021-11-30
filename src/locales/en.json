@@ -1,0 +1,11 @@
+{
+	"position": "Position Name",
+	"company": "Company",
+	"salary": "Salary",
+	"city": "City",
+	"publicationDate": "Publication Date",
+	"views": "Num. of Visits",
+    "million": "million",
+    "millions": "million",
+    "tableColor": "table table-dark"
+}

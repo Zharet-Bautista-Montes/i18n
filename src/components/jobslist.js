@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import Job from "./job";
 
 const JobsList = () => {
@@ -10,7 +11,7 @@ const JobsList = () => {
       salary: 4.5,
       city: "Bogotá, Colombia",
       date: "2019-03-26",
-      visits: 4352,
+      visits: 43052,
     },
     {
       id: "0002",
@@ -32,18 +33,20 @@ const JobsList = () => {
     },
   ]);
 
+  const tcolor = useIntl().formatMessage({id:'tableColor'})
+
   return (
     <div>
-      <table className="table">
+      <table className={tcolor}>
         <thead className="thead-dark">
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Position</th>
-            <th scope="col">Company</th>
-            <th scope="col">Salary</th>
-            <th scope="col">City</th>
-            <th scope="col">Publication date</th>
-            <th scope="col">Number of Visits</th>
+            <th scope="col"><FormattedMessage id="position"/></th>
+            <th scope="col"><FormattedMessage id="company"/></th>
+            <th scope="col"><FormattedMessage id="salary"/></th>
+            <th scope="col"><FormattedMessage id="city"/></th>
+            <th scope="col"><FormattedMessage id="publicationDate"/></th>
+            <th scope="col"><FormattedMessage id="views"/></th>
           </tr>
         </thead>
         <tbody>
